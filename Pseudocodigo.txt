@@ -1,1 +1,26 @@
+INICIO
+   Definir precioProducto Como Real
+   Definir cantidad Como Entero
+   Definir subtotal Como Real
+   Definir descuento Como Real
+   Definir precioFinal Como Real
 
+   Escribir "Ingrese el precio del producto: "
+   Leer precioProducto
+
+   Escribir "Ingrese la cantidad de unidades a comprar: "
+   Leer cantidad
+
+   subtotal ← precioProducto * cantidad
+
+   SI subtotal > 100 ENTONCES
+       descuento ← subtotal * 0.15
+   SINO
+       descuento ← 0
+   FIN SI
+    precioFinal ← subtotal - descuento
+    Escribir "Subtotal: $", subtotal
+    Escribir "Descuento: $", descuento
+    Escribir "Precio final: $", precioFinal
+
+FIN
