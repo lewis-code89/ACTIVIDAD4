@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace tareasemana4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("BOLETA DE VENTA ELECTRONICA");
+            Console.Write("Ingrese el precio unitario del producto ($): ");
+            double precio = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Ingrese la cantidad de unidades a comprar del producto: ");
+            double cantidad = Convert.ToDouble(Console.ReadLine());
+            double total = precio * cantidad;
+            if (total > 100)
+            {
+                double descontar = total * 15 / 100;
+                double descontado = total - descontar;
+                Console.WriteLine("Usted tiene un 15% de descuento por el monto de su compra");
+                Console.WriteLine("Total: " + total);
+                Console.WriteLine("Descuento: " + "- " + descontar);
+                Console.WriteLine("Total a pagar: " + descontado);
+            }
+            else if (total <= 100)
+            {
+                Console.WriteLine("Usted tiene que pagar: ");
+                Console.WriteLine("Total: " + total);
+            }
+        }
+    }
+}
